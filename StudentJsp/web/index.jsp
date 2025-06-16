@@ -17,7 +17,7 @@
 
 <div class="container">
 
-    <h1 class="text-primary text-center">All Student</h1>  
+    <h1 class="text-success text-center">All Student</h1>  
 
     <table class ="table table-striped">
         <thead> 
@@ -30,8 +30,8 @@
                 <th>Subject</th>
                 <th>Action</th>
 
-            </tr>>
-        </thead>>
+            </tr>
+        </thead>
 
         <tbody>
             <c:forEach items="${list}" var="s">
