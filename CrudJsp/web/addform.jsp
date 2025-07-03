@@ -3,7 +3,7 @@
 <div  class="container my-3">
     
     <div class="bg-success text-center">  
-        <h1 class="jumborton">Add Employee</h1>
+        <h1 class="jumborton">Add </h1>
     
   </div>
     <!--start form-->

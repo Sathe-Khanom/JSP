@@ -6,7 +6,7 @@
 <%@include file="header.jsp" %>
 
 <%
-    List<Model> list = Dao.getAllEmployee();
+    List<Model> list = Dao.getAll();
     request.setAttribute("list", list);
     
 %>
@@ -17,16 +17,14 @@
 
 <div class="container">
 
-    <h1 class="text-success text-center">All </h1>  
+    <h1 class="text-success text-center">All Employee </h1>  
 
     <table class ="table table-striped">
         <thead> 
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Contact</th>
-                <th>Gender</th>
+                <th>Designation</th>               
                 <th>Salary</th>
                 <th>Action</th>
 
@@ -38,9 +36,7 @@
                 <tr>
                     <td>${s.getId()}</td>
                     <td>${s.getName()}</td>
-                    <td>${s.getEmail()}</td>
-                    <td>${s.getContact()}</td>
-                    <td>${s.getGender()}</td>
+                    <td>${s.getDesignation()}</td>                   
                     <td>${s.getSalary()}</td> 
                     <td>
                         <a href="editform.jsp?id=${s.id}" class="btn btn-primary">Edit</a> 

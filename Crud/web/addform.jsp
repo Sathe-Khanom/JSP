@@ -2,8 +2,8 @@
 
 <div  class="container my-3">
     
-    <div class="bg-success text-center">  
-        <h1 class="jumborton">Add </h1>
+    <div class="bg-secondary text-center">  
+        <h1 class="jumborton">Add Employee</h1>
     
   </div>
     <!--start form-->
@@ -16,18 +16,15 @@
             </div>
 
             <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+                <label for="exampleInputDesignation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation" name="designation" placeholder="">
             </div>        
         </div>
          
           
 
  <div class="row">
-            <div class="col-md-6">
-                <label for="exampleInputContact" class="form-label">Contact</label>
-                <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact ">
-            </div>
+          
      
      <div class="col-md-6">
                 <label for="exampleInputSalary" class="form-label">Salary</label>
@@ -35,24 +32,7 @@
             </div>        
         </div>
          
-         <div class="row">
-            <div class="col-md-6">
-                <label for="exampleInputGender" class="form-label">Gender</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="Male" name="gender" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Male
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" value="Female" name="gender" id="flexRadioDefault2" >
-                    <label class="form-check-label" >
-                        Female
-                    </label>
-                </div>
-            </div>        
-      
-        </div>
+     
        </div>
        
 

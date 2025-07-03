@@ -25,10 +25,10 @@ public class Dao {
     static ResultSet rs;
     static String sql;
 
-    public static List<Model> getAllEmployee() {
+    public static List<Model> getAll() {
 
         List<Model> employees = new ArrayList<>();
-        sql = "select * from emp";
+        sql = "select * from employee";
 
         try {
             ps = DbUtil.getCon().prepareStatement(sql);
@@ -40,9 +40,7 @@ public class Dao {
                 Model s = new Model(
                         rs.getInt("id"),
                         rs.getString("name"),
-                        rs.getString("email"),
-                        rs.getString("contact"),
-                        rs.getString("gender"),
+                        rs.getString("designation"),                       
                          rs.getFloat("salary")                
                 );
 
@@ -59,18 +57,16 @@ public class Dao {
         return employees;
     }
 
-    public static int saveEmployee(Model s) {
+    public static int save(Model s) {
 
         int status = 0;
-        sql = "insert into emp(name,email,contact,gender,salary) values(?,?,?,?,?)";
+        sql = "insert into employee(name,designation,salary) values(?,?,?)";
 
         try {
             ps = DbUtil.getCon().prepareStatement(sql);
             ps.setString(1, s.getName());
-            ps.setString(2, s.getEmail());
-            ps.setString(3, s.getContact());
-            ps.setString(4, s.getGender());
-            ps.setFloat(5, s.getSalary());
+            ps.setString(2, s.getDesignation());           
+            ps.setFloat(3, s.getSalary());
 
             status = ps.executeUpdate();
 
@@ -85,9 +81,9 @@ public class Dao {
         return status;
     }
 
-    public static void deleteEmployee(int id) {
+    public static void delete(int id) {
 
-        sql = "delete from emp where id=?";
+        sql = "delete from employee where id=?";
 
         try {
             ps = DbUtil.getCon().prepareStatement(sql);
@@ -105,7 +101,7 @@ public class Dao {
     public static Model getById(int id) {
 
         Model s = null;
-        sql = "select * from emp where id = ?";
+        sql = "select * from employee where id = ?";
 
         try {
             ps = DbUtil.getCon().prepareStatement(sql);
@@ -116,9 +112,7 @@ public class Dao {
                 s = new Model(
                         rs.getInt("id"),
                         rs.getString("name"),
-                        rs.getString("email"),
-                        rs.getString("contact"),
-                        rs.getString("gender"),
+                        rs.getString("designation"),                       
                         rs.getFloat("salary")
                 );
 
@@ -134,20 +128,18 @@ public class Dao {
         return s;
     }
 
-    public static int updateEmployee(Model s) {
+    public static int update(Model s) {
 
         int status = 0;
-        sql = "update emp set name = ?, email= ?, contact=?, gender=?, salary=? where id=? ";
+        sql = "update employee set name = ?, designation= ?, salary=? where id=? ";
 
         try {
             ps = DbUtil.getCon().prepareStatement(sql);
             ps.setString(1, s.getName());
-            ps.setString(2, s.getEmail());
-            ps.setString(3, s.getContact());
-            ps.setString(4, s.getGender());
+            ps.setString(2, s.getDesignation());        
 
-            ps.setFloat(5, s.getSalary());
-            ps.setInt(6, s.getId());
+            ps.setFloat(3, s.getSalary());
+            ps.setInt(4, s.getId());
 
             status = ps.executeUpdate();
 

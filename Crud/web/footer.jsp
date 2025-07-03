@@ -53,7 +53,7 @@
         <!-- Column 3 -->
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase">Contact</h5>
-          <p>Email: info@example.com</p>
+          <p>Email:sathekhanom550@gmail.com</p>
           <p>Phone: +880-1234-567890</p>
           <p>Address: Dhaka, Bangladesh</p>
         </div>
@@ -62,7 +62,7 @@
 
     <!-- Footer Bottom -->
     <div class="footer-bottom text-white">
-      &copy; 2025 MyBrand. All rights reserved.
+      &copy;  SATHE KHANOM
     </div>
   </footer>
 

@@ -6,7 +6,7 @@
 
 
 <%
-    int result = Dao.updateEmployee(s);
+    int result = Dao.update(s);
     if (result > 0) {
 
         response.sendRedirect("index.jsp");

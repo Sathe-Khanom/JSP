@@ -6,7 +6,7 @@
 
 
 <%
-    Dao.deleteEmployee(s.getId());
+    Dao.delete(s.getId());
     response.sendRedirect("index.jsp");
     %>
 
